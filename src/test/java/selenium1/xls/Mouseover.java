@@ -4,6 +4,8 @@ package selenium1.xls;
 
 
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,11 +21,12 @@ public class Mouseover {
 	driver = new ChromeDriver();
 	driver.get("https://www.amazon.com/");
 	driver.manage().window().maximize();
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	WebElement element = driver.findElement(By.xpath("//*[@id=\"icp-nav-flyout\"]/span/span[2]/span[1]"));
 	Actions action = new Actions(driver);
 	action.moveToElement(element).perform();
 	WebElement element1 = driver.findElement(By.xpath("//*[@id=\"icp-nav-flyout\"]/span/span[2]/span[1]"));
-	element.click();
+	element1.click();
 	Thread.sleep(5000);
 	
 	driver.close();

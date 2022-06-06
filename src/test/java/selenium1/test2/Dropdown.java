@@ -14,6 +14,7 @@ public class Dropdown {
 		driver.get("https://www.automationtestinginsider.com/2019/08/textarea-textarea-element-defines-multi.html");
 
 		driver.findElement(By.cssSelector("select[name='cars'] :nth-child(3)")).click();
+		Select.
 
 	}
 
